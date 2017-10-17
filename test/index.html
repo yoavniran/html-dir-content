@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&D Test for html-dir-content</title>
+    <script src="../dist/html-dir-content.js"></script>
+
+    <style>
+        body.dnd {
+            background: rgba(123, 255, 104, 0.73);
+        }
+    </style>
+</head>
+<body>
+<h1>Drag a directory over...</h1>
+
+<script>
+
+    (() => {
+
+        window.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            document.body.classList.add("dnd");
+            e.dataTransfer.dropEffect = "copy";
+        });
+
+        window.addEventListener("drop", (e) => {
+            e.preventDefault();
+            document.body.classList.remove("dnd");
+
+            htmlDirContent.getFilesFromDragEvent(e, true)
+                .then((files) => {
+                    console.log("FILES !!!!!!!!!", files);
+                });
+        });
+
+        window.addEventListener("dragleave", () => {
+            document.body.classList.remove("dnd");
+        });
+
+        window.addEventListener("dragend", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            document.body.classList.remove("dnd");
+        });
+
+    })();
+
+</script>
+</body>
+</html>

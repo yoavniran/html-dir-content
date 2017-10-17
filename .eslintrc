@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb",
+        "eslint:recommended",
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+    ],
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "no-cond-assign": [
+            "error",
+            "always"
+        ],
+        // disable rules from base configurations
+        "no-console": 0,
+        "import/no-unresolved": 0,
+        "import/no-named-as-default": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/extensions": 0,
+        "import/no-dynamic-require": 0,
+        "import/no-named-as-default-member": 1,
+        "import/prefer-default-export": 0,
+        "import/no-webpack-loader-syntax": 0, // dynamic imports using bundle-loader
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/alt-text": 0,
+        "jsx-a11y/media-has-caption": 0,
+        "jsx-a11y/href-no-hash": 0,
+        "no-unused-vars": 1
+    }
+}

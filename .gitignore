@@ -1,0 +1,14 @@
+.idea/
+
+dist/
+node_modules/
+coverage/
+
+# Transient log files
+npm-debug.log
+yarn-error.log
+
+
+.vscode/
+
+eslint-report/

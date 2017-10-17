@@ -1,6 +1,6 @@
 # HTML DIR CONTENT
 
-[![npm version](https://badge.fury.io/js/html-dir-content.svg)](https://badge.fury.io/js/html-dir-content)
+[![npm version](https://badge.fury.io/js/html-dir-content.svg)](https://www.npmjs.com/package/html-dir-content)
 [![CircleCI](https://circleci.com/gh/yoavniran/html-dir-content.svg?style=svg)](https://circleci.com/gh/yoavniran/html-dir-content)
 
 **(recursively) iterate directory entries in the browser (html5 File System API)**

@@ -45,7 +45,7 @@ Directly in the browser:
             - recursive (default: false) - whether to recursively follow the dir structure
             - bail (default: 1000) - how many levels to follow recursively before bailing
 
-> note: The order of files returned is not guaranteed to be in same order the files on the file system or organized     
+> note: The order of files returned is not guaranteed to be in same order the files on the file system are organized     
 
 ### Example
 
@@ -54,7 +54,7 @@ check out this [codepen](https://codepen.io/poeticGeek/pen/xXmPyX).
 your HTML:
 
 ``` html
-        <script src="dist/html-dir-content.min.js"></script>
+        <script src="<path-to-node_modules>/html-dir-content/dist/html-dir-content.min.js"></script>
 ```
 
 your Javascript:

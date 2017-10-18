@@ -5,6 +5,21 @@
 
 **(recursively) iterate directory entries in the browser (html5 File System API)**
 
+
+### Install
+
+In Node/Webpack environment:
+```
+    npm i html-dir-content
+    OR
+    yarn add html-dir-content
+```
+
+Directly in the browser: 
+```
+    <script src="https://unpkg.com/html-dir-content/dist/html-dir-content.min.js"></script>
+```
+
 ### API
 
    * getFiles(item:[DataTransferItem](https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem), options?: Options) : Promise<Array<File>>
@@ -34,13 +49,12 @@
 
 ### Example
 
-your HTML:
+check out this [codepen](https://codepen.io/poeticGeek/pen/xXmPyX).
 
-checkout this [codepen](https://codepen.io/poeticGeek/pen/xXmPyX).
+your HTML:
 
 ``` html
         <script src="dist/html-dir-content.min.js"></script>
-
 ```
 
 your Javascript:
@@ -55,6 +69,20 @@ your Javascript:
                         console.log("we have the files: ", files);
                     });
             });
+```
+
+or with import/require:
+
+``` javascript
+
+    import {getFilesFromDragEvent} from "html-dir-content";
+    .
+    .
+    .
+    getFilesFromDragEvent(e, true)
+        .then((files) => {
+      
+        });
 ```
 
 You can drag a directory (ex: from File Explorer / Finder) and the resolved files array will contain the files contained within it and its sub folders 

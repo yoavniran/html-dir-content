@@ -33,6 +33,7 @@ Directly in the browser:
             - recursive (default: false) - whether to recursively follow the dir structure
             - bail (default: 1000) - how many levels to follow recursively before bailing
             
+                   
    *  getFilesFromDragEvent(evt: [DragEvent](https://developer.mozilla.org/en-US/docs/Web/Events/drop), options?: Options)
    
         Returns a promise of an array of files for the given event. 

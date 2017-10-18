@@ -36,6 +36,8 @@
 
 your HTML:
 
+checkout this [codepen](https://codepen.io/poeticGeek/pen/xXmPyX).
+
 ``` html
         <script src="dist/html-dir-content.min.js"></script>
 

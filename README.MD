@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/html-dir-content.svg)](https://www.npmjs.com/package/html-dir-content)
 [![CircleCI](https://circleci.com/gh/yoavniran/html-dir-content.svg?style=svg)](https://circleci.com/gh/yoavniran/html-dir-content)
+[![Coverage Status](https://coveralls.io/repos/github/yoavniran/html-dir-content/badge.svg?branch=master)](https://coveralls.io/github/yoavniran/html-dir-content?branch=master)
 
 **(recursively) iterate directory entries in the browser (html5 File System API)**
 

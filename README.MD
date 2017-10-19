@@ -93,4 +93,4 @@ You can drag a directory (ex: from File Explorer / Finder) and the resolved file
 
 Requires global [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object to be available
 
-> Works on all the latest browser versions (not IE11)
+> Works on Chrome, Firefox and Edge (no support on IE11 or Safari)

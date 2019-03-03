@@ -33,6 +33,7 @@ Directly in the browser:
             (In case of boolean value, it will be used for the recursive config) 
             - recursive (default: false) - whether to recursively follow the dir structure
             - bail (default: 1000) - how many levels to follow recursively before bailing
+            - withFullPath (default: false) - file names contain the full file path
             
                    
    *  getFilesFromDragEvent(evt: [DragEvent](https://developer.mozilla.org/en-US/docs/Web/Events/drop), options?: Options)

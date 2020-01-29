@@ -28,7 +28,7 @@
             e.preventDefault();
             document.body.classList.remove("dnd");
 
-            htmlDirContent.getFilesFromDragEvent(e, true)
+            htmlDirContent.getFilesFromDragEvent(e, {recursive: true, withFullPath: true})
                 .then((files) => {
                     console.log("FILES !!!!!!!!!", files);
                 });

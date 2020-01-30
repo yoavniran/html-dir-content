@@ -19,7 +19,9 @@ module.exports = {
             "statements": 96
         },
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/test/jestSetup.js",
+    "setupFilesAfterEnv": [
+        "<rootDir>/test/jestSetup.js"
+    ],
     "modulePaths": [
         "<rootDir>/lib"
     ]

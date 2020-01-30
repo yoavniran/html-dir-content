@@ -1,6 +1,6 @@
 {
     "name": "html-dir-content",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "(recursively) iterate directory entries in the browser (html5 File System API)",
     "main": "dist/html-dir-content.js",
     "scripts": {

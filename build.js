@@ -1,42 +1,52 @@
 const rollup = require("rollup"),
     chalk = require("chalk"),
     babel = require("rollup-plugin-babel"),
-    uglify = require("rollup-plugin-uglify"),
+    resolve = require("@rollup/plugin-node-resolve"),
+    {uglify} = require("rollup-plugin-uglify"),
     pkg = require("./package.json");
 
 const destination = "dist/";
 
-const warnHandler = (info) => {
-    console.info(chalk.yellow(`encountered rollup warning for: ${info.loc}`), info);
-};
+// const warnHandler = (info) => {
+//     console.info(chalk.yellow(`encountered rollup warning for: ${info.loc}`), info);
+// };
 
 const doRollup = (config) =>
     rollup.rollup(config)
         .then((bundle) => bundle.write(config));
 
-const baseOptions = {
-    onwarn: warnHandler,
-    input: "lib/index.js",
-    format: "umd",
+const input = "lib/index.js";
+
+const outputConfig = {
     name: "htmlDirContent",
+    format: "umd",
+    sourcemap: "inline",
     banner: `/* html-dir-content v${pkg.version} (c) ${new Date().getFullYear()}, Yoav Niran, https://github.com/yoavniran/html-dir-content.git/blob/master/LICENSE */`,
-    plugins: [
-        babel({exclude: "node_modules/**"})
-    ]
 };
+
+const plugins = [
+    resolve(),
+    babel({ exclude: "node_modules/**" })
+];
 
 Promise.all([
     doRollup({ //----------- DEV
-        ...baseOptions,
-        sourcemap: "inline",
-        file: (destination + "html-dir-content.js")
+        input,
+        output: {
+            ...outputConfig,
+            file: (destination + "html-dir-content.js")
+        },
+        plugins,
     }),
     doRollup({ //------------ PROD
-        ...baseOptions,
-        file: (destination + "html-dir-content.min.js"),
-        sourcemap: true,
+        input,
+        output: {
+            ...outputConfig,
+            sourcemap: true,
+            file: (destination + "html-dir-content.min.js")
+        },
         plugins: [
-            babel({exclude: "node_modules/**"}),
+            ...plugins,
             uglify({
                 output: {
                     comments: (node, comment) => {

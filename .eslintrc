@@ -3,10 +3,10 @@
         "browser": true,
         "node": true,
         "es6": true,
-        "jest": true
+        "jest": true,
+        "commonjs": true,
     },
     "extends": [
-        "airbnb",
         "eslint:recommended",
     ],
     "parser": "babel-eslint",
@@ -30,12 +30,21 @@
         ],
         // disable rules from base configurations
         "no-console": 0,
+        "indent": [1, 4],
+        "quotes": [
+            2,
+            "double",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "one-var": 0,
+        "arrow-parens": [2, "always"],
+        "no-confusing-arrow": 0,
         "import/no-unresolved": 0,
-        "import/no-named-as-default": 0,
         "import/no-extraneous-dependencies": 0,
         "import/extensions": 0,
         "import/no-dynamic-require": 0,
-        "import/no-named-as-default-member": 1,
         "import/prefer-default-export": 0,
         "import/no-webpack-loader-syntax": 0, // dynamic imports using bundle-loader
         "jsx-a11y/no-static-element-interactions": 0,
